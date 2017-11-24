@@ -16,15 +16,15 @@ namespace DrawTriangle
         public Form1()
         {
             InitializeComponent();           
-            Pen drawPen = new Pen(Color.Red, 10);
-            DrawTriangle(drawPen, 20, 100, 303, 58, 40, 250);
+            Pen pen = new Pen(Color.Red, 10);
+            DrawTriangle(pen, 20, 100, 303, 58, 40, 250);
         }
-            public void DrawTriangle(Pen drawPen, int y1, int x1, int y2, int x2, int y3, int x3 )
+            public void DrawTriangle(Pen pen, int y1, int x1, int y2, int x2, int y3, int x3 )
             {
             Graphics g = this.CreateGraphics();
-            g.DrawLine(drawPen, y1, x1, y2, x2);
-            g.DrawLine(drawPen, y2, x2, y3, x3);
-            g.DrawLine(drawPen, y3, x3, y1, x1);
+            g.DrawLine(pen, y1, x1, y2, x2);
+            g.DrawLine(pen, y2, x2, y3, x3); 
+            g.DrawLine(pen, y3, x3, y1, x1);
         }
     }
 }
